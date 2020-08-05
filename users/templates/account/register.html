@@ -1,0 +1,21 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Astria Engage</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token%}
+    {{form.as_p}}
+
+    <button type="submit">Register</button>
+    </form>
+{% for error in form.errors %}
+    <p style="color:red">{{error}}</p>
+{% endfor%}
+    
+</body>
+<footer>
+    <p>Astrianovity | 2020</p>
+</footer>
+</html>

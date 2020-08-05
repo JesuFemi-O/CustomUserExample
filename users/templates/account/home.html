@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Astria Engage</title>
+</head>
+<body>
+    {% if request.user.is_authenticated%}
+        <p>Hello, {{request.user.username}}</p> | <p><a href="{% url 'logout'%}">Logout</a></p>
+    {% else %}
+        <a href="{% url 'register'%}">Register</a>
+    {% endif%}
+    <hr>
+    <h1>Welcome to The Astria Platform</h1>
+    <p>This is a dummy page for testing</p>
+
+    <hr>
+    <footer>
+        <p>Astrianovity | 2020</p>
+    </footer>
+</body>
+</html>
