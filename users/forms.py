@@ -14,7 +14,7 @@ class CustomUserCreationForm(UserCreationForm):
     #you can refresh django forms to be sure...
     #password = forms.CharField(label='Password', widget=forms.PasswordInput)
     #password2 = forms.CharField(label='Password confirmation', widget=forms.PasswordInput)
-    class Meta(UserCreationForm):
+    class Meta:
         model = CustomUser
         fields = ('email', 'username',)
          #if you specified a field in REQUIRED_FILED you would have to use it here
