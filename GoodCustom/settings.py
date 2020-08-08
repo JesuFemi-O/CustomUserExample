@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 
     'users',
 ]
@@ -124,3 +125,10 @@ STATIC_URL = '/static/'
 
 #custom user settings
 AUTH_USER_MODEL = 'users.CustomUser'
+
+#Rest Settings
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'users.exceptions.core_exception_handler',
+    'NON_FIELD_ERRORS_KEY': 'error',
+    'DEFAULT_AUTHENTICATION_CLASSES': ('users.backends.JWTAuthentication',)
+}
